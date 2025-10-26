@@ -1,0 +1,99 @@
+/* src/app/features/user/pages/home/home.component.scss */
+
+/* Conteneur avec image de fond et bords arrondis */
+.hero {
+  position: relative;
+  min-height: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-image: url('../../../assets/couverture.jpg'); /* remplace par ton image */
+  background-size: cover;
+  background-position: center;
+  padding: 24px;
+}
+
+/* Bouton Sign IN en haut à droite */
+.signin {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  border-radius: 9999px;
+  background: #000;
+  color: #fff;
+  padding: 8px 18px;
+  text-transform: none;
+  font-weight: 600;
+}
+
+/* Logo rond centré au-dessus du menu */
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 6px auto;
+  color: #1a1a1a;
+}
+
+/* règle corrigée : sélectionne l'image à l'intérieur du .logo */
+.logo .logo-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  display: block;
+  border-radius: 50%;
+}
+
+/* Bloc nav centré et étroit avec double trait noir */
+.center-nav {
+  width: min(520px, 85%);
+  margin: 0 auto;
+}
+
+.rule {
+  height: 3px;
+  background: #111;
+  margin: 8px 0;
+}
+
+/* Items du menu (CSS valide, pas de nesting) */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a[mat-button] {
+  color: #0d0d0d;
+  font-weight: 500;
+  text-transform: none;
+  padding: 0 6px;
+  min-width: auto;
+}
+
+.menu a.active {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Responsif : sur mobile, on compacte et on prévoit un menu burger */
+@media (max-width: 600px) {
+  .hero {
+    padding: 16px;
+    min-height: 200px;
+  }
+  .menu {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+  .signin {
+    padding: 6px 14px;
+    top: 8px;
+    right: 8px;
+  }
+}
