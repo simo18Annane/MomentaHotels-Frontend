@@ -1,0 +1,82 @@
+/* --- Navbar container --- */
+.navbar {
+    width: calc(100% - 80px);      /* petite marge à gauche/droite */
+    padding: 15px 40px;
+    background: #f5f2f2;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+
+    position: fixed;               /* <<<<< important */
+    top: 10px;                     /* distance du haut */
+    left: 50%;
+    transform: translateX(-50%);   /* centrer la barre */
+    z-index: 100;                  /* au-dessus de tout */
+}
+
+/* --- Left menu links --- */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* --- Center logo --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+}
+
+.logo span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #6b3d12;
+    font-family: "Georgia", serif;
+}
+
+/* --- Sign In button with image --- */
+.signin-btn {
+    background: #6b3d12;
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.signin-btn:hover {
+    opacity: 0.85;
+}
+
+/* Image icon inside the button */
+.signin-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
