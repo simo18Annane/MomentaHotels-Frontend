@@ -1,43 +1,5 @@
-* {
-  box-sizing: border-box;
-}
-
-/* conteneur global */
-.login-page {
-  display: flex;
-  min-height: 100vh;
-  background: #ffffff;
-}
-
-/* Colonne image à gauche */
-.login-image {
-  flex: 0 0 45%;
-  background-image: url("../../assets/signPage.jpg"); /* ton image */
-  background-size: cover;
-  background-position: center;
-  border-radius: 0 20px 20px 0;
-}
-
-/* Colonne droite */
-.login-right {
-  flex: 1;
-  padding: 30px 60px;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Lien retour */
-.back-link {
-  font-size: 14px;
-  color: #000;
-  text-decoration: underline;
-  margin-bottom: 40px;
-  width: max-content;
-}
-
 /* Carte de login */
 .login-card {
-  margin: auto;
   width: 420px;
   padding: 40px 50px;
   border-radius: 20px;

@@ -1,8 +1,15 @@
 import { Routes } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
-import { SiginpageComponent } from './siginpage/siginpage.component';
+import { AuthLayoutComponent } from './auth/auth-layout/auth-layout.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 export const routes: Routes = [
     {path: "home", component : HomepageComponent},
-    {path: "signin", component : SiginpageComponent}
+    {path: "authentication", component : AuthLayoutComponent,
+        children: [
+            {path: 'login', component: LoginComponent},
+            {path: 'signup', component: SignupComponent}
+        ]
+    }
 ];

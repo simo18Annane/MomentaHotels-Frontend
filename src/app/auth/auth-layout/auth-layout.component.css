@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+/* conteneur global */
+.auth-page {
+  display: flex;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* Colonne image à gauche */
+.auth-image {
+  flex: 0 0 45%;
+  background-image: url("../../../assets/signPage.jpg"); /* ton image */
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 20px 20px 0;
+}
+
+/* Colonne droite */
+.auth-right {
+  flex: 1;
+  padding: 30px 60px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Back Home reste en haut */
+.back-link {
+  font-size: 14px;
+  color: #000;
+  text-decoration: underline;
+  margin-bottom: 20px;
+  width: max-content;
+}
+
+/* Conteneur centré pour la carte login/signup */
+.auth-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;   /* centre verticalement */
+  align-items: center;        /* centre horizontalement */
+}

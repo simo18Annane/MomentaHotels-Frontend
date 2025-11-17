@@ -1,0 +1,80 @@
+/* Carte de signup */
+.signup-card {
+  width: 420px;
+  padding: 40px 50px;
+  border-radius: 20px;
+  border: 1px solid #d7d7d7;
+  background: #ffffff;
+}
+
+/* Logo + nom */
+.signup-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.signup-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.signup-logo span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #6b3d12;
+}
+
+/* Titre manuscrit */
+.signup-title {
+  text-align: center;
+  margin: 0 0 30px;
+  font-size: 26px;
+  font-family: "Dancing Script", cursive;
+  color: #000;
+}
+
+/* Champs */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #e9e9e9;
+  font-size: 14px;
+}
+
+/* Ligne checkbox */
+.checkbox-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 11px;
+  margin: 5px 0 20px;
+}
+
+.checkbox-line input {
+  margin-top: 2px;
+}
+
+/* Bouton Sign up */
+.signup-btn {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: #6b3d12; /* marron Momenta */
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.signup-btn:hover {
+  opacity: 0.9;
+}
