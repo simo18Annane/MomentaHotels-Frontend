@@ -1,0 +1,84 @@
+/* Section globale */
+.destinations {
+  background: #a47b53;              /* marron de ta maquette */
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Conteneur des cartes */
+.destinations-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;                  /* pour s'adapter en responsive */
+}
+
+/* Carte */
+.destination-card {
+  width: 320px;
+  background: #ffffff;
+  border-radius: 26px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Image en haut */
+.destination-image {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 26px 26px 0 0;
+}
+
+/* Corps de la carte */
+.destination-body {
+  padding: 18px 20px 10px;
+}
+
+.destination-title {
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.destination-description {
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Pied de carte : bouton */
+.destination-footer {
+  padding: 10px 20px 20px;
+}
+
+.destination-btn {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 999px;
+  background: #6b3d12;        /* marron foncé */
+  color: #ffffff;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.destination-btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive léger */
+@media (max-width: 900px) {
+  .destinations {
+    padding: 40px 20px;
+  }
+
+  .destination-card {
+    width: 100%;
+    max-width: 360px;
+  }
+}

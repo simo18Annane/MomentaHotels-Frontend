@@ -1,0 +1,80 @@
+.services-section {
+  display: flex;
+  width: 100%;
+  height: 600px;              /* ajuste selon ta maquette */
+  overflow: hidden;
+}
+
+/* Chaque colonne */
+.service-card {
+  flex: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Légère superposition sombre pour rendre le texte lisible */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.35)
+  );
+}
+
+/* Titre en haut centré */
+.service-title {
+  position: relative;
+  z-index: 1;
+  margin-top: 25px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Trait blanc sous le texte */
+.underline {
+  margin-top: 4px;
+  width: 80px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 999px;
+}
+
+/* Images de fond spécifiques */
+.restaurant {
+  background-image: url("../../../assets/restaurant.jpg");
+}
+
+.gym {
+  background-image: url("../../../assets/gym.jpg");
+}
+
+.pool {
+  background-image: url("../../../assets/pool.jpg");
+}
+
+.sauna {
+  background-image: url("../../../assets/sauna.jpg");
+}
+
+/* Responsive simple */
+@media (max-width: 900px) {
+  .services-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .service-card {
+    height: 220px;
+  }
+}
