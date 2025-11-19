@@ -8,11 +8,12 @@
 /* Ligne principale */
 .footer-top {
   display: flex;
-  align-items: center;           
+  align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 60px;                         /* espace entre les 3 grandes colonnes */
+  gap: 40px;          /* un peu moins que 60px */
+  flex-wrap: wrap;    /* ✅ permet de passer sur 2 lignes proprement */
 }
 
 /* Logo + menu */
@@ -99,6 +100,24 @@
   opacity: 0.9;
   margin-top: 8px;
 }
+
+/* Écrans moyens : on réduit les espaces et
+   on place les réseaux sociaux sur une nouvelle ligne si besoin */
+@media (max-width: 1100px) {
+  .footer-top {
+    gap: 24px;
+  }
+
+  /* Logo + menu + cities prennent la 1ère ligne,
+     le bloc réseaux sociaux peut passer dessous */
+  .footer-social {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+}
+
 
 /* Responsive */
 @media (max-width: 900px) {
