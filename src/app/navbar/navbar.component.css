@@ -1,82 +1,157 @@
 /* --- Navbar container --- */
 .navbar {
-    width: calc(100% - 80px);      /* petite marge à gauche/droite */
-    padding: 15px 40px;
-    background: #f5f2f2;
-    border-radius: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  width: calc(100% - 80px);
+  padding: 15px 40px;
 
-    position: fixed;               /* <<<<< important */
-    top: 10px;                     /* distance du haut */
-    left: 50%;
-    transform: translateX(-50%);   /* centrer la barre */
-    z-index: 100;                  /* au-dessus de tout */
+  background: rgba(255, 255, 255, 0.25); /* transparence légère */
+  backdrop-filter: blur(12px);          /* effet verre flou */
+  -webkit-backdrop-filter: blur(12px);  /* compatibilité Safari */
+  
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.35); /* contour blanc léger */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  flex-wrap: nowrap;
 }
+
+
 
 /* --- Left menu links --- */
 .nav-links {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #000;
-    font-size: 16px;
-    font-weight: 500;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .nav-links a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 /* --- Center logo --- */
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .logo img {
-    width: 45px;
-    height: 45px;
+  width: 45px;
+  height: 45px;
 }
 
 .logo span {
-    font-size: 22px;
-    font-weight: bold;
-    color: #6b3d12;
-    font-family: "Georgia", serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #6b3d12;
+  font-family: "Georgia", serif;
 }
 
 /* --- Sign In button with image --- */
 .signin-btn {
-    background: #6b3d12;
-    color: white;
-    padding: 10px 22px;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
+  background: #6b3d12;
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
 }
 
 .signin-btn:hover {
-    opacity: 0.85;
+  opacity: 0.85;
 }
 
 /* Image icon inside the button */
 .signin-icon {
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Écran moyen (tablette) : on serre un peu tout,
+   mais on reste sur une seule ligne */
+@media (max-width: 900px) {
+  .navbar {
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .logo span {
+    font-size: 18px;
+  }
+
+  .signin-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Petit écran (mobile) : on passe volontairement sur 2 lignes,
+   mais de manière contrôlée, sans que le bouton "arrive" du bord gauche */
+@media (max-width: 600px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    justify-content: space-between;
+  }
+
+  /* 1ère ligne : logo + bouton */
+  .logo {
+    order: 1;
+  }
+
+  .signin-btn {
+    order: 2;
+    margin-left: auto;     /* reste collé à droite même sur la 2ème ligne */
+  }
+
+  /* 2ème ligne : menu centré */
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
 }
