@@ -1,0 +1,76 @@
+/* Section complète */
+.about-section {
+  position: relative;
+  width: 100%;
+  height: 800px; /* EXACTEMENT comme demandé */
+  background-image: url("../../../assets/aboutus.jpg"); /* ton image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Overlay légèrement assombri */
+.about-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35); /* fidèle à ta maquette */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Phrase principale */
+.about-quote {
+  font-family: "Dancing Script", cursive;
+  font-size: 48px;
+  color: #fff;
+  margin-top: 40px;
+  margin-bottom: 60px; /* espace parfaitement identique */
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Grille des 3 blocs */
+.about-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px; /* ESPACEMENT EXACT */
+  width: 100%;
+  max-width: 1400px; /* centre parfaitement les 3 blocs */
+}
+
+/* CARTES */
+.about-card {
+  width: 380px;
+  height: 200px;
+  padding: 20px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.18);
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-area {
+  height: 70px;       /* 👈 hauteur fixe pour aligner les titres */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-area h3 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.text-area {
+  text-align: center;
+  padding: 0 10px;
+  font-size: 18px;
+  line-height: 1.5;
+}
